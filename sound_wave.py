@@ -16,8 +16,8 @@ import re
 
 # import file
 filename_1 = "audio/TEST.wav"
-img_logo = Image.open('logo.png')
-white_img = Image.open('white.PNG')
+img_logo = Image.open('images/logo.png')
+white_img = Image.open('images/white.PNG')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
