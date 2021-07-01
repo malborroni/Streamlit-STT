@@ -1,6 +1,4 @@
 #import os 
-#os.chdir(r"C:\Users\Gogliom\OneDrive - Jakala SpA\Proposta_SKy\Audio Analysis")
-
 
 # import library
 import streamlit as st
@@ -17,8 +15,7 @@ import speech_recognition as sr
 import re
 
 # import file
-
-filename_1 = "TEST_c.wav"
+filename_1 = "audio/TEST.wav"
 img_logo = Image.open('logo.png')
 white_img = Image.open('white.PNG')
 
