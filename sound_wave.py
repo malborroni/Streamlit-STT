@@ -45,7 +45,7 @@ if example == "Example 1":
 
     spf = wave.open(filename, "r")
     signal = spf.readframes(-1)
-    signal = np.fromstring(signal, "Int16")
+    signal = np.frombuffer(signal, "Int16")
     fs = spf.getframerate()
     fr = spf.getnframes()
     #time = np.linspace(0, len(signal) / fs, num=len(signal))
@@ -128,7 +128,7 @@ with sound:
         kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
         kpi1_col.write("&emsp;" + str(len(wordList)))
         kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
-        kpi1_col.write("&emsp;2")
+        kpi1_col.write("&emsp;4")
 
         # Second column
         kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
