@@ -14,6 +14,8 @@ import altair as alt
 import speech_recognition as sr
 import re
 
+from annotated_text import annotated_text
+
 # import file
 filename_1 = "audio/TEST.wav"
 img_logo = Image.open('images/logo.png')
@@ -86,6 +88,20 @@ with play:
         #st.write("« " + text_audio + " »")
         st.write("« " + "Egregio signor le ricordo che oggi è il ventidue duemilaventuno e che la sto chiamando da Tunisi per conto con sede legale in per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
         st.write("« " + "Sì" + " »")
+        
+        annotated_text(
+    "This ",
+    ("is", "verb", "#8ef"),
+    " some ",
+    ("annotated", "adj", "#faa"),
+    ("text", "noun", "#afa"),
+    " for those of ",
+    ("you", "pronoun", "#fea"),
+    " who ",
+    ("like", "verb", "#8ef"),
+    " this sort of ",
+    ("thing", "noun", "#afa"),
+)
 
 
 ######################### AUDIO #########################
