@@ -64,20 +64,15 @@ else:
 
     Below is an example of how to use the annotated_text function:
     """
-
-    annotated_text(
-        "This ",
-        ("is", "verb", "#8ef"),
-        " some ",
-        ("annotated", "adj", "#faa"),
-        ("text", "noun", "#afa"),
-        " for those of ",
-        ("you", "pronoun", "#fea"),
-        " who ",
-        ("like", "verb", "#8ef"),
-        " this sort of ",
-        ("thing", "noun", "#afa"),
-    )
+    filename = filename_1
+    
+    annotated_text( "Egregio signor",
+                    ("Alessandro", "nome", "#8ef"),
+                    ("Borroni", "nome", "#8ef"),
+                    "le ricordo che oggi è il",
+                    ("ventisette ottobre duemilaventuno", "data", "#faa"),
+                    "e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A."
+                  )
     
 # text from audio
     r = sr.Recognizer()
