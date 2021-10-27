@@ -60,9 +60,7 @@ if example == "Q-1703186_VO.mp3":
    
 else:
     """
-    # Annotated text example
-
-    Below is an example of how to use the annotated_text function:
+    # Highlighting CRM Entities
     """
     filename = filename_1
     
