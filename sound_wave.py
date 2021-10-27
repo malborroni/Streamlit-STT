@@ -64,12 +64,12 @@ else:
     """
     filename = filename_1
     
-    annotated_text( "Egregio signor",
-                    ("Alessandro", "nome", "#8ef"),
-                    ("Borroni", "cognome", "#fea"),
-                    "le ricordo che oggi è il",
-                    ("ventisette ottobre duemilaventuno", "data", "#faa"),
-                    "e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A."
+    annotated_text( "Egregio signor ",
+                    (" Alessandro ", "nome", "#8ef"),
+                    (" Borroni ", "cognome", "#fea"),
+                    " le ricordo che oggi è il ",
+                    (" ventisette ottobre duemilaventuno ", "data", "#faa"),
+                    " e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A."
                   )
     
 # text from audio
