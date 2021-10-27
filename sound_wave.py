@@ -14,33 +14,6 @@ import altair as alt
 import speech_recognition as sr
 import re
 
-###########################################
-
-pip install st-annotated-text
-from annotated_text import annotated_text
-
-"""
-# Annotated text example
-
-Below is an example of how to use the annotated_text function:
-"""
-
-annotated_text(
-    "This ",
-    ("is", "verb", "#8ef"),
-    " some ",
-    ("annotated", "adj", "#faa"),
-    ("text", "noun", "#afa"),
-    " for those of ",
-    ("you", "pronoun", "#fea"),
-    " who ",
-    ("like", "verb", "#8ef"),
-    " this sort of ",
-    ("thing", "noun", "#afa"),
-)
-
-###########################################
-
 # import file
 filename_1 = "audio/TEST.wav"
 img_logo = Image.open('images/logo.png')
