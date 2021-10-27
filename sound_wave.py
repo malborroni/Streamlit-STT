@@ -27,6 +27,10 @@ play = st.beta_container()
 sound = st.beta_container()
 kpi = st.beta_container()
 
+def header(url):
+    st.markdown(f'<p style="background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
+
+
 st.markdown("""
 <style>
 .JTALK_1 {font-size:40px !important; font-family: arial black;color: #B41E3C}
@@ -89,19 +93,9 @@ with play:
         st.write("« " + "Egregio signor le ricordo che oggi è il ventidue duemilaventuno e che la sto chiamando da Tunisi per conto con sede legale in per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
         st.write("« " + "Sì" + " »")
         
-        annotated_text(
-    "This ",
-    ("is", "verb", "#8ef"),
-    " some ",
-    ("annotated", "adj", "#faa"),
-    ("text", "noun", "#afa"),
-    " for those of ",
-    ("you", "pronoun", "#fea"),
-    " who ",
-    ("like", "verb", "#8ef"),
-    " this sort of ",
-    ("thing", "noun", "#afa"),
-)
+        g = st.write("« " + "Egregio signor le ricordo che oggi è il ventidue duemilaventuno e che la sto chiamando da Tunisi per conto con sede legale in per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
+        header(g)
+        
 
 
 ######################### AUDIO #########################
