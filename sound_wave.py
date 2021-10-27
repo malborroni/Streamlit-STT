@@ -1,3 +1,5 @@
+pip install st-annotated-text
+
 #import os 
 
 # import library
@@ -14,7 +16,7 @@ import altair as alt
 import speech_recognition as sr
 import re
 
-from st_annotated_text import annotated_text
+from annotated_text import annotated_text
 
 # import file
 filename_1 = "audio/TEST.wav"
