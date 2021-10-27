@@ -16,7 +16,7 @@ import re
 
 ###########################################
 
-import streamlit as st
+%pip install st-annotated-text
 from annotated_text import annotated_text
 
 """
