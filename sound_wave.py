@@ -1,5 +1,3 @@
-pip install st-annotated-text
-
 #import os 
 
 # import library
