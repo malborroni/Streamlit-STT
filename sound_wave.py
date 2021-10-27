@@ -14,6 +14,8 @@ import altair as alt
 import speech_recognition as sr
 import re
 
+from annotated_text import annotated_text
+
 # import file
 filename_1 = "audio/TEST.wav"
 img_logo = Image.open('images/logo.png')
@@ -38,7 +40,7 @@ st.markdown("""
 # side bar
 st.sidebar.image(img_logo, width = 180)
 #example = st.sidebar.selectbox("Select a file ", ['Example 1'])
-example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3'])
+example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'PROVA'])
 
 # analyze the file
 #if example == "Example 1":
@@ -55,7 +57,28 @@ if example == "Q-1703186_VO.mp3":
     #signal = signal[:len(time)]
     time = np.linspace(0, fr / fs, num = len(signal))
     df = pd.DataFrame({'time':time, 'signal':signal})
+   
+else:
+    """
+    # Annotated text example
 
+    Below is an example of how to use the annotated_text function:
+    """
+
+    annotated_text(
+        "This ",
+        ("is", "verb", "#8ef"),
+        " some ",
+        ("annotated", "adj", "#faa"),
+        ("text", "noun", "#afa"),
+        " for those of ",
+        ("you", "pronoun", "#fea"),
+        " who ",
+        ("like", "verb", "#8ef"),
+        " this sort of ",
+        ("thing", "noun", "#afa"),
+    )
+    
 # text from audio
     r = sr.Recognizer()
     with sr.AudioFile(filename) as source:
