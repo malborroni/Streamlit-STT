@@ -21,6 +21,7 @@ filename_1 = "audio/TEST.wav"
 filename_2 = "audio/TEST_2.wav"
 img_logo = Image.open('images/logo.png')
 white_img = Image.open('images/white.PNG')
+overlay_1 = Image.open('images/grafico_audio_1_overlay.png')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
@@ -144,6 +145,8 @@ with sound:
         st.write('\n\n\n')
 
         st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True)  
+        
+        st.image(overlay_1, width = 25)
         
         kpi1_col, kpi2_col = st.beta_columns(2)
         
