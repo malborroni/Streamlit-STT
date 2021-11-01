@@ -148,6 +148,10 @@ with sound:
         
         st.image(overlay_1, width = 800)
         
+        st.image(overlay_1, width = 750)
+        
+        st.image(overlay_1, width = 700)
+        
         kpi1_col, kpi2_col = st.beta_columns(2)
         
         # First column
