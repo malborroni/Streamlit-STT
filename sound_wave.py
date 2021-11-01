@@ -41,7 +41,7 @@ st.markdown("""
 # side bar
 st.sidebar.image(img_logo, width = 180)
 #example = st.sidebar.selectbox("Select a file ", ['Example 1'])
-example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'PROVA'])
+example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'Q-2807995_CCA.mp3'])
 
 # analyze the file
 #if example == "Example 1":
@@ -58,6 +58,13 @@ if example == "Q-1703186_VO.mp3":
     #signal = signal[:len(time)]
     time = np.linspace(0, fr / fs, num = len(signal))
     df = pd.DataFrame({'time':time, 'signal':signal})
+    
+# text from audio
+    r = sr.Recognizer()
+    with sr.AudioFile(filename) as source:
+        audio_data = r.record(source)
+        text_audio = r.recognize_google(audio_data, language = "it-IT")
+        wordList = re.sub("[^\w]", " ",  text_audio).split()
    
 elif example == "Q-2807995_CCA.mp3":
     filename = filename_2
@@ -72,9 +79,6 @@ elif example == "Q-2807995_CCA.mp3":
     #signal = signal[:len(time)]
     time = np.linspace(0, fr / fs, num = len(signal))
     df = pd.DataFrame({'time':time, 'signal':signal})
-    
-    
-    
     
 # text from audio
     r = sr.Recognizer()
