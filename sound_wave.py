@@ -18,6 +18,7 @@ from annotated_text import annotated_text
 
 # import file
 filename_1 = "audio/TEST.wav"
+filename_2 = "audio/TEST_2.wav"
 img_logo = Image.open('images/logo.png')
 white_img = Image.open('images/white.PNG')
 
@@ -58,19 +59,22 @@ if example == "Q-1703186_VO.mp3":
     time = np.linspace(0, fr / fs, num = len(signal))
     df = pd.DataFrame({'time':time, 'signal':signal})
    
-else:
-    """
-    # Highlighting CRM Entities
-    """
-    filename = filename_1
+elif example == "Q-2807995_CCA.mp3":
+    filename = filename_2
+
+    spf = wave.open(filename, "r")
+    signal = spf.readframes(-1)
+    signal = np.frombuffer(signal, "Int16")
+    fs = spf.getframerate()
+    fr = spf.getnframes()
+    #time = np.linspace(0, len(signal) / fs, num=len(signal))
+    #time = np.linspace(0,fr / fs)
+    #signal = signal[:len(time)]
+    time = np.linspace(0, fr / fs, num = len(signal))
+    df = pd.DataFrame({'time':time, 'signal':signal})
     
-    annotated_text( "Egregio signor ",
-                    (" Alessandro ", "nome", "#8ef"),
-                    (" Borroni ", "cognome", "#fea"),
-                    " le ricordo che oggi è il ",
-                    (" ventisette ottobre duemilaventuno ", "data", "#faa"),
-                    " e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A."
-                  )
+    
+    
     
 # text from audio
     r = sr.Recognizer()
