@@ -146,7 +146,7 @@ with sound:
 
         st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True)  
         
-        st.image(overlay_1, width = 100)
+        st.image(overlay_1, width = 1920)
         
         kpi1_col, kpi2_col = st.beta_columns(2)
         
