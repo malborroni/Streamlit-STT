@@ -17,8 +17,9 @@ import re
 from annotated_text import annotated_text
 
 # import file
-filename_1 = "audio/TEST.wav"
-filename_2 = "audio/TEST_2.wav"
+#filename_1 = "audio/TEST.wav"
+filename_1 = "audio/Audio_1.mp3"
+filename_2 = "audio/Audio_2.mp3"
 img_logo = Image.open('images/logo.png')
 white_img = Image.open('images/white.PNG')
 overlay_1 = Image.open('images/grafico_audio_1_overlay.png')
