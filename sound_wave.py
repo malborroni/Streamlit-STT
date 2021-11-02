@@ -22,7 +22,7 @@ filename_2 = "audio/TEST_2.wav"
 img_logo = Image.open('images/logo.png')
 white_img = Image.open('images/white.PNG')
 overlay_1 = Image.open('images/grafico_audio_1_overlay.png')
-scr_table_1 = Image.open('images/script_table_1.png')
+scr_table_1 = Image.open('images/tabella_script_1_v2.png')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
