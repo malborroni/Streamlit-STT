@@ -149,11 +149,7 @@ with sound:
         
         st.image(overlay_1, width = 720)
         
-        st.image(scr_table_1, width = 730)
-        
         st.image(scr_table_1, width = 740)
-        
-        st.image(scr_table_1, width = 720)
         
         kpi1_col, kpi2_col = st.beta_columns(2)
         
