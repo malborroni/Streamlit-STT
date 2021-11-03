@@ -44,7 +44,7 @@ st.markdown("""
 # side bar
 st.sidebar.image(img_logo, width = 180)
 #example = st.sidebar.selectbox("Select a file ", ['Example 1'])
-example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'Q-2807995_CCA.mp3'])
+example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'Q-2807995_VO.mp3'])
 
 # analyze the file
 #if example == "Example 1":
@@ -110,11 +110,35 @@ with play:
     #st.image(white_img, width = 25)
     but1, but2, but3, but4, but5 = st.beta_columns(5)
     if (but3.button("SPEECH")):
-        st.write('\n\n\n')
-        #st.image(white_img, width = 25)
-        #st.write("« " + text_audio + " »")
-        st.write("« " + "Egregio signor le ricordo che oggi è il ventidue duemilaventuno e che la sto chiamando da Tunisi per conto con sede legale in per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
-        st.write("« " + "Sì" + " »")       
+        
+        if example == "Q-1703186_VO.mp3":
+            filename = filename_1
+        
+            st.write('\n\n\n')
+            #st.image(white_img, width = 25)
+            #st.write("« " + text_audio + " »")
+            st.write("« " + "Egregio signor Guglielmo Alberto Barletta le ricordo che oggi è il ventidue duemilaventuno e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A. con sede legale in Genova per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta Più Conveniente Luce Verde sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
+            st.write("« " + "Sì" + " »")       
+            
+        else:
+            filename = filename_2
+                     
+            st.write('\n\n\n')
+            #st.image(white_img, width = 25)
+            #st.write("« " + text_audio + " »")
+            st.write("« " + "Mi conferma che oggi è il giorno primo luglio duemilaventi mi conferma" + " »")
+            st.write("« " + "Sì" + " »")   
+            st.write("« " + "Le chiedo la cortesia di confermarmi il suo nome e cognome signora" + " »")
+            st.write("« " + "Montemurro Anita" + " »")
+            st.write("« " + "La sua data di nascita" + " »")
+            st.write("« " + "Uno uno cinquantadue" + " »")
+            st.write("« " + "Dove è nata" + " »")
+            st.write("« " + "Valsinni" + " »")
+            st.write("« " + "Perfetto Mi conferma che l’immobile presso il quale verrà erogata la fornitura di è da lei occupato a titolo di proprietario o inquilino?" + " »")
+            st.write("« " + "E proprietà" + " »")   
+            st.write("« " + "Le ricordo che per pagare le bollette attraverso la domiciliazione bancaria è necessario che mi confermi le seguenti informazioni. Mi conferma di aver autorizzato IREN Mercato a richiedere, in base alla normativa bancaria S.E.P.A., l’addebito permanente Core in conto corrente bancario per il pagamento, alla data di scadenza dell’obbligazione, delle bollette?" + " »")
+            st.write("« " + "Sì" + " »")   
+            
 
 
 ######################### AUDIO #########################
