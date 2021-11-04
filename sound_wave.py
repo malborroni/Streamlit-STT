@@ -102,7 +102,7 @@ with header:
 ######################## PLAY AUDIO #########################
 with play:
     st.markdown('<div style="text-align:center"><p class="big-font">Play the Audio</p></div>', unsafe_allow_html=True)  
-    if example == elif example == "Q-1703186_VO.mp3":
+    if example == "Q-1703186_VO.mp3":
         audio_file = open(filename_1, 'rb')
     elif example == "Q-2807995_VO.mp3":
         audio_file = open(filename_2, 'rb')
