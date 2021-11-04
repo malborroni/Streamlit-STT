@@ -28,6 +28,8 @@ scr_table_1 = Image.open('images/script_table_1.png')
 scr_table_2 = Image.open('images/script_table_2.png')
 CRM_match_1 = Image.open('images/CRM_table_1.png')
 CRM_match_2 = Image.open('images/CRM_table_2.png')
+result_1 = Image.open('images/result_VO_1.png')
+result_2 = Image.open('images/result_VO_2.png')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
@@ -121,7 +123,7 @@ with play:
         #st.image(white_img, width = 25)
         #st.write("« " + text_audio + " »")
         if example == "Q-1703186_VO.mp3":
-            st.write("« " + "Egregio signor Guglielmo Alberto Barletta le ricordo che oggi è il ventidue duemilaventuno e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A. con sede legale in Genova per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta Più Conveniente Luce Verde sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
+            st.write("« " + "Egregio signor Guglielmo Alberto Barletta le ricordo che oggi è il ventidue due duemilaventuno e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A. con sede legale in Genova per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta Iren Più Conveniente Luce Verde sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
             st.write("« " + "Sì" + " »")
         elif example == "Q-2807995_VO.mp3":
             st.write("« " + "Mi conferma che oggi è il giorno primo luglio duemilaventi mi conferma" + " »")
@@ -133,8 +135,8 @@ with play:
             st.write("« " + "Dove è nata" + " »")
             st.write("« " + "Valsinni" + " »")
             st.write("« " + "Perfetto Mi conferma che l’immobile presso il quale verrà erogata la fornitura di è da lei occupato a titolo di proprietario o inquilino?" + " »")
-            st.write("« " + "E proprietà" + " »")   
-            st.write("« " + "Le ricordo che per pagare le bollette attraverso la domiciliazione bancaria è necessario che mi confermi le seguenti informazioni. Mi conferma di aver autorizzato IREN Mercato a richiedere, in base alla normativa bancaria S.E.P.A., l’addebito permanente Core in conto corrente bancario per il pagamento, alla data di scadenza dell’obbligazione, delle bollette?" + " »")
+            st.write("« " + "E proprietaria" + " »")   
+            st.write("« " + "Le ricordo che per pagare le bollette attraverso la domiciliazione bancaria è necessario che mi confermi le seguenti informazioni Mi conferma di aver autorizzato Iren Mercato a richiedere in base alla normativa bancaria SEPA l’addebito permanente Core in conto corrente bancario per il pagamento alla data di scadenza dell’obbligazione delle bollette?" + " »")
             st.write("« " + "Sì" + " »")   
             
 
@@ -302,8 +304,28 @@ with sound:
             kpi2_col.write('&emsp;10 sec.')
             kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
             kpi2_col.write('&emsp;8 sec.')
+            
+    if (but3.button("RESULT")):
+        
+        if example == "Q-1703186_VO.mp3":
+            
+            plt.figure(figsize=(35,10))
+            plt.axis('off')
+            plt.imshow(result_1) 
+            st.pyplot(plt)  # display it
+            
+            st.write('\n\n\n')
+            #st.write('\n\n\n')            
 
-
+        elif example == "Q-2807995_VO.mp3":   
+            
+            plt.figure(figsize=(35,10))
+            plt.axis('off')
+            plt.imshow(result_2) 
+            st.pyplot(plt)  # display it   
+            
+            st.write('\n\n\n')
+            #st.write('\n\n\n')
     st.write('\n\n\n')
     st.write('\n\n\n')
     #st.image(white_img, width = 25)
