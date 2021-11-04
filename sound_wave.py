@@ -26,6 +26,8 @@ overlay_1 = Image.open('images/audio_overlay_1.png')
 overlay_2 = Image.open('images/audio_overlay_2.png')
 scr_table_1 = Image.open('images/script_table_1.png')
 scr_table_2 = Image.open('images/script_table_2.png')
+CRM_match_1 = Image.open('images/CRM_table_1.png')
+CRM_match_2 = Image.open('images/CRM_table_2.png')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
@@ -208,8 +210,8 @@ with sound:
             st.write('\n\n\n')            
 
         elif example == "Q-2807995_VO.mp3":
-            st.image(overlay_2, width = 720)  
-            st.image(scr_table_2, width = 740)   
+            #st.image(overlay_2, width = 720)  
+            #st.image(scr_table_2, width = 740)   
             
             plt.figure(figsize=(35,10))
             plt.axis('off')
@@ -223,11 +225,38 @@ with sound:
             
             st.write('\n\n\n')
             st.write('\n\n\n')
+       
+    
+        st.markdown('<div style="text-align:center"><p class="medium-font">CRM Info Matching</p></div>', unsafe_allow_html=True)  
         
+        if example == "Q-1703186_VO.mp3":
+            #st.image(overlay_1, width = 720)  
+            #st.image(scr_table_1, width = 740)
+            
+            #plt.figure(figsize=(35,10))
+            #plt.axis('off')
+            #plt.imshow(CRM_match_1) 
+            #st.pyplot(plt)  # display it
+            
+            st.write('\n\n\n')
+            st.write('\n\n\n')            
+
+        elif example == "Q-2807995_VO.mp3":
+            #st.image(overlay_2, width = 720)  
+            #st.image(scr_table_2, width = 740)   
+            
+            #plt.figure(figsize=(35,10))
+            #plt.axis('off')
+            #plt.imshow(CRM_match_2) 
+            #st.pyplot(plt)  # display it   
+            
+            st.write('\n\n\n')
+            st.write('\n\n\n')
+            
+            
+        st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True) 
 
         kpi1_col, kpi2_col = st.beta_columns(2)
-        
-        st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True)  
         
         # First column
         if example == "Q-1703186_VO.mp3":
