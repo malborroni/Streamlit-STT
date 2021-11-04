@@ -51,16 +51,16 @@ example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'Q-2807995
 if example == "Q-1703186_VO.mp3":
     filename = filename_1
 
-    spf = wave.open(filename_1, "r")
-    signal = spf.readframes(-1)
-    signal = np.frombuffer(signal, "Int16")
-    fs = spf.getframerate()
-    fr = spf.getnframes()
+    spf_1 = wave.open(filename_1, "r")
+    signal_1 = spf_1.readframes(-1)
+    signal_1 = np.frombuffer(signal_1, "Int16")
+    fs_1 = spf_1.getframerate()
+    fr_1 = spf_1.getnframes()
     #time = np.linspace(0, len(signal) / fs, num=len(signal))
     #time = np.linspace(0,fr / fs)
     #signal = signal[:len(time)]
-    time = np.linspace(0, fr / fs, num = len(signal))
-    df = pd.DataFrame({'time':time, 'signal':signal})
+    time_1 = np.linspace(0, fr_1 / fs_1, num = len(signal_1))
+    df_1 = pd.DataFrame({'time':time_1, 'signal':signal_1})
     
 # text from audio
     r = sr.Recognizer()
@@ -72,16 +72,16 @@ if example == "Q-1703186_VO.mp3":
 elif example == "Q-2807995_VO.mp3":
     filename = filename_2
 
-    spf = wave.open(filename_2, "r")
-    signal = spf.readframes(-1)
-    signal = np.frombuffer(signal, "Int16")
-    fs = spf.getframerate()
-    fr = spf.getnframes()
+    spf_2 = wave.open(filename_2, "r")
+    signal_2 = spf_2.readframes(-1)
+    signal_2 = np.frombuffer(signal_2, "Int16")
+    fs_2 = spf_2.getframerate()
+    fr_2 = spf_2.getnframes()
     #time = np.linspace(0, len(signal) / fs, num=len(signal))
     #time = np.linspace(0,fr / fs)
     #signal = signal[:len(time)]
-    time = np.linspace(0, fr / fs, num = len(signal))
-    df = pd.DataFrame({'time':time, 'signal':signal})
+    time_2 = np.linspace(0, fr_2 / fs_2, num = len(signal_2))
+    df_2 = pd.DataFrame({'time':time_2, 'signal':signal_2})
     
 # text from audio
     r = sr.Recognizer()
@@ -146,23 +146,45 @@ with sound:
     # st.altair_chart(chart)
     
     if (but3.button("CALCULATE")):
-        st.write('\n\n\n')
-        st.write('\n\n\n')
-        #st.image(white_img, width = 25)
+        
+        if example == "Q-1703186_VO.mp3":        
+            st.write('\n\n\n')
+            st.write('\n\n\n')
+            #st.image(white_img, width = 25)
 
-        plt.figure(figsize=(35,10))
-        plt.title("Signal Wave \n", fontsize = 35)
-        plt.xlabel('\n Time (s)', fontsize = 30)
-        plt.ylabel('Amplitude \n', fontsize = 30)
-        plt.xticks(fontsize = 25)
-        plt.yticks(fontsize = 25)
-        #plt.plot(time, signal, color = '#143C73')
-        plt.plot(time, signal, color = '#B41E3C')
-        st.pyplot(plt)
+            plt.figure(figsize=(35,10))
+            plt.title("Signal Wave \n", fontsize = 35)
+            plt.xlabel('\n Time (s)', fontsize = 30)
+            plt.ylabel('Amplitude \n', fontsize = 30)
+            plt.xticks(fontsize = 25)
+            plt.yticks(fontsize = 25)
+            #plt.plot(time, signal, color = '#143C73')
+            plt.plot(time_1, signal_1, color = '#B41E3C')
+            st.pyplot(plt)
 
-        #st.image(white_img, width = 25)
-        st.write('\n\n\n')
-        st.write('\n\n\n')
+            #st.image(white_img, width = 25)
+            st.write('\n\n\n')
+            st.write('\n\n\n')
+            
+        elif example == "Q-2807995_VO.mp3":
+            st.write('\n\n\n')
+            st.write('\n\n\n')
+            #st.image(white_img, width = 25)
+
+            plt.figure(figsize=(35,10))
+            plt.title("Signal Wave \n", fontsize = 35)
+            plt.xlabel('\n Time (s)', fontsize = 30)
+            plt.ylabel('Amplitude \n', fontsize = 30)
+            plt.xticks(fontsize = 25)
+            plt.yticks(fontsize = 25)
+            #plt.plot(time, signal, color = '#143C73')
+            plt.plot(time_2, signal_2, color = '#B41E3C')
+            st.pyplot(plt)
+
+            #st.image(white_img, width = 25)
+            st.write('\n\n\n')
+            st.write('\n\n\n')
+
 
         st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True)  
         
