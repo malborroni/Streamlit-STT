@@ -192,7 +192,7 @@ with sound:
         
         if example == "Q-1703186_VO.mp3":
             #st.image(overlay_1, width = 720)  
-            st.image(scr_table_1, width = 740)
+            #st.image(scr_table_1, width = 740)
             
             plt.figure(figsize=(35,10))
             plt.axis('off')
@@ -210,6 +210,16 @@ with sound:
         elif example == "Q-2807995_VO.mp3":
             st.image(overlay_2, width = 720)  
             st.image(scr_table_2, width = 740)   
+            
+            plt.figure(figsize=(35,10))
+            plt.axis('off')
+            plt.imshow(overlay_2) 
+            st.pyplot(plt)  # display it
+            
+            plt.figure(figsize=(35,10))
+            plt.axis('off')
+            plt.imshow(scr_table_2) 
+            st.pyplot(plt)  # display it    
             
             st.write('\n\n\n')
             st.write('\n\n\n')
