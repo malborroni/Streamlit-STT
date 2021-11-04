@@ -113,13 +113,17 @@ with play:
     st.markdown('<div style="text-align:center"><p class="big-font">Play the Audio</p></div>', unsafe_allow_html=True)  
     if example == "Q-1703186_VO.mp3":
         audio_file = open(filename_1, 'rb')
+        audio_bytes = audio_file.read()
+        st.audio(audio_bytes)
     elif example == "Q-2807995_VO.mp3":
         audio_file = open(filename_2, 'rb')
+        audio_bytes = audio_file.read()
+        st.audio(audio_bytes)
     else:
         pass
         
-    audio_bytes = audio_file.read()
-    st.audio(audio_bytes)
+#    audio_bytes = audio_file.read()
+#    st.audio(audio_bytes)
 
     st.write('\n\n\n')
     #st.image(white_img, width = 25)
