@@ -193,6 +193,10 @@ with sound:
         if example == "Q-1703186_VO.mp3":
             st.image(overlay_1, width = 720)  
             st.image(scr_table_1, width = 740)
+            
+            plt.figure(figsize=(35,10))
+            plt.imshow(overlay_1) 
+            st.pyplot(plt)  # display it
 
         elif example == "Q-2807995_VO.mp3":
             st.image(overlay_2, width = 720)  
