@@ -95,6 +95,9 @@ elif example == "Q-2807995_VO.mp3":
         audio_data = r.record(source)
         text_audio = r.recognize_google(audio_data, language = "it-IT")
         wordList_2 = re.sub("[^\w]", " ",  text_audio).split()
+        
+else:
+    pass
 
 ######################### INTRO #########################
 with header:
@@ -112,6 +115,9 @@ with play:
         audio_file = open(filename_1, 'rb')
     elif example == "Q-2807995_VO.mp3":
         audio_file = open(filename_2, 'rb')
+    else:
+        pass
+        
     audio_bytes = audio_file.read()
     st.audio(audio_bytes)
 
@@ -138,6 +144,9 @@ with play:
             st.write("« " + "E proprietaria" + " »")   
             st.write("« " + "Le ricordo che per pagare le bollette attraverso la domiciliazione bancaria è necessario che mi confermi le seguenti informazioni Mi conferma di aver autorizzato Iren Mercato a richiedere in base alla normativa bancaria SEPA l’addebito permanente Core in conto corrente bancario per il pagamento alla data di scadenza dell’obbligazione delle bollette?" + " »")
             st.write("« " + "Sì" + " »")   
+        
+        else:
+            pass
             
 
 
@@ -190,6 +199,9 @@ with sound:
             #st.image(white_img, width = 25)
             st.write('\n\n\n')
             st.write('\n\n\n')
+            
+        else:
+            pass
 
 
         st.markdown('<div style="text-align:center"><p class="medium-font">Script Components Extraction</p></div>', unsafe_allow_html=True)  
@@ -227,6 +239,9 @@ with sound:
             
             st.write('\n\n\n')
             #st.write('\n\n\n')
+            
+        else:
+            pass
        
     
         st.markdown('<div style="text-align:center"><p class="medium-font">CRM Info Matching</p></div>', unsafe_allow_html=True)  
@@ -255,6 +270,9 @@ with sound:
             st.write('\n\n\n')
             #st.write('\n\n\n')
             
+        else:
+            pass
+            
             
         st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True) 
 
@@ -277,6 +295,9 @@ with sound:
             kpi1_col.write("&emsp;" + str(len(wordList_2)))
             kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
             kpi1_col.write("&emsp;13")
+
+        else:
+            pass
 
             
 
@@ -304,6 +325,9 @@ with sound:
             kpi2_col.write('&emsp;10 sec.')
             kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
             kpi2_col.write('&emsp;8 sec.')
+            
+        else:
+            pass
 
     st.write('\n\n\n')
     but1, but2, but3, but4, but5 = st.beta_columns(5)
@@ -329,6 +353,10 @@ with sound:
             
             st.write('\n\n\n')
             #st.write('\n\n\n')
+            
+        else:
+            pass
+            
     st.write('\n\n\n')
     st.write('\n\n\n')
     #st.image(white_img, width = 25)
