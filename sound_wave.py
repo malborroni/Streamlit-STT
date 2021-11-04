@@ -51,7 +51,7 @@ example = st.sidebar.selectbox("Select a file ", ['Q-1703186_VO.mp3', 'Q-2807995
 if example == "Q-1703186_VO.mp3":
     filename = filename_1
 
-    spf = wave.open(filename, "r")
+    spf = wave.open(filename_1, "r")
     signal = spf.readframes(-1)
     signal = np.frombuffer(signal, "Int16")
     fs = spf.getframerate()
@@ -64,7 +64,7 @@ if example == "Q-1703186_VO.mp3":
     
 # text from audio
     r = sr.Recognizer()
-    with sr.AudioFile(filename) as source:
+    with sr.AudioFile(filename_1) as source:
         audio_data = r.record(source)
         text_audio = r.recognize_google(audio_data, language = "it-IT")
         wordList = re.sub("[^\w]", " ",  text_audio).split()
@@ -72,7 +72,7 @@ if example == "Q-1703186_VO.mp3":
 elif example == "Q-2807995_CCA.mp3":
     filename = filename_2
 
-    spf = wave.open(filename, "r")
+    spf = wave.open(filename_2, "r")
     signal = spf.readframes(-1)
     signal = np.frombuffer(signal, "Int16")
     fs = spf.getframerate()
@@ -85,7 +85,7 @@ elif example == "Q-2807995_CCA.mp3":
     
 # text from audio
     r = sr.Recognizer()
-    with sr.AudioFile(filename) as source:
+    with sr.AudioFile(filename_2) as source:
         audio_data = r.record(source)
         text_audio = r.recognize_google(audio_data, language = "it-IT")
         wordList = re.sub("[^\w]", " ",  text_audio).split()
@@ -102,7 +102,7 @@ with header:
 ######################## PLAY AUDIO #########################
 with play:
     st.markdown('<div style="text-align:center"><p class="big-font">Play the Audio</p></div>', unsafe_allow_html=True)  
-    audio_file = open(filename, 'rb')
+    audio_file = open(filename_1, 'rb')
     audio_bytes = audio_file.read()
     st.audio(audio_bytes)
 
