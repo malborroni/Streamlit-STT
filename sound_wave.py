@@ -304,7 +304,8 @@ with sound:
             kpi2_col.write('&emsp;10 sec.')
             kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
             kpi2_col.write('&emsp;8 sec.')
-            
+
+    st.write('\n\n\n')
     but1, but2, but3, but4, but5 = st.beta_columns(5)
             
     if (but3.button("RESULT")):
