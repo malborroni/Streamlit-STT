@@ -22,8 +22,10 @@ filename_1 = "audio/Audio_1.wav"
 filename_2 = "audio/Audio_2.wav"
 img_logo = Image.open('images/logo.png')
 white_img = Image.open('images/white.PNG')
-overlay_1 = Image.open('images/grafico_audio_1_overlay.png')
-scr_table_1 = Image.open('images/tabella_script_1_v2.png')
+overlay_1 = Image.open('images/audio_overlay_1.png')
+overlay_2 = Image.open('images/audio_overlay_2.png')
+scr_table_1 = Image.open('images/script_table_1.png')
+scr_table_2 = Image.open('images/script_table_2.png')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
@@ -186,13 +188,20 @@ with sound:
             st.write('\n\n\n')
 
 
-        st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True)  
+        st.markdown('<div style="text-align:center"><p class="medium-font">Script Components Extraction</p></div>', unsafe_allow_html=True)  
         
-        st.image(overlay_1, width = 720)
+        if example == "Q-1703186_VO.mp3":
+            st.image(overlay_1, width = 720)  
+            st.image(scr_table_1, width = 740)
+
+        elif example == "Q-2807995_VO.mp3":
+            st.image(overlay_2, width = 720)  
+            st.image(scr_table_2, width = 740)            
         
-        st.image(scr_table_1, width = 740)
-        
+
         kpi1_col, kpi2_col = st.beta_columns(2)
+        
+        st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True)  
         
         # First column
         if example == "Q-1703186_VO.mp3":
@@ -210,7 +219,7 @@ with sound:
             kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
             kpi1_col.write("&emsp;" + str(len(wordList_2)))
             kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;4")
+            kpi1_col.write("&emsp;13")
 
             
 
