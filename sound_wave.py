@@ -215,17 +215,29 @@ with sound:
             
 
         # Second column
-        kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
-        kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Greeting: </b></p></div>', unsafe_allow_html=True)
-        kpi2_col.write('&emsp;2 sec.')
-        kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Formal introduction: </b></p></div>', unsafe_allow_html=True)
-        kpi2_col.write('&emsp;16 sec.')
-        kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Next steps definition: </b></p></div>', unsafe_allow_html=True)
-        kpi2_col.write('&emsp;15 sec.')
-        kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Operator renunciation question: </b></p></div>', unsafe_allow_html=True)
-        kpi2_col.write('&emsp;6 sec.')
-        kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer renunciation answer: </b></p></div>', unsafe_allow_html=True)
-        kpi2_col.write('&emsp;1 sec.')
+        if example == "Q-1703186_VO.mp3":
+            kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Opening: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;35 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Vocal Order: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;5 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;1 sec.')
+ 
+        elif example == "Q-2807995_VO.mp3":
+            kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Date confirmation: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;3 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Generalità: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;7 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Conferma titolo: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;7/8 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Header Domiciliazione: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;7 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Conferma Autorizzazione SEPA: </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;10 sec.')
+            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
+            kpi2_col.write('&emsp;8 sec.')
 
 
     st.write('\n\n\n')
