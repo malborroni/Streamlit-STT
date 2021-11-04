@@ -67,7 +67,7 @@ if example == "Q-1703186_VO.mp3":
     with sr.AudioFile(filename_1) as source:
         audio_data = r.record(source)
         text_audio = r.recognize_google(audio_data, language = "it-IT")
-        wordList = re.sub("[^\w]", " ",  text_audio).split()
+        wordList_1 = re.sub("[^\w]", " ",  text_audio).split()
    
 elif example == "Q-2807995_VO.mp3":
     filename = filename_2
@@ -88,7 +88,7 @@ elif example == "Q-2807995_VO.mp3":
     with sr.AudioFile(filename_2) as source:
         audio_data = r.record(source)
         text_audio = r.recognize_google(audio_data, language = "it-IT")
-        wordList = re.sub("[^\w]", " ",  text_audio).split()
+        wordList_2 = re.sub("[^\w]", " ",  text_audio).split()
 
 ######################### INTRO #########################
 with header:
@@ -195,13 +195,24 @@ with sound:
         kpi1_col, kpi2_col = st.beta_columns(2)
         
         # First column
-        kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
-        kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
-        kpi1_col.write("&emsp;" + str(round(time[-1],1)) + ' sec.')
-        kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
-        kpi1_col.write("&emsp;" + str(len(wordList)))
-        kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
-        kpi1_col.write("&emsp;4")
+        if example == "Q-1703186_VO.mp3":
+            kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
+            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
+            kpi1_col.write("&emsp;" + str(round(time_1[-1],1)) + ' sec.')
+            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
+            kpi1_col.write("&emsp;" + str(len(wordList_1)))
+            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
+            kpi1_col.write("&emsp;4")
+        elif example == "Q-2807995_VO.mp3":
+            kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
+            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
+            kpi1_col.write("&emsp;" + str(round(time_2[-1],1)) + ' sec.')
+            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
+            kpi1_col.write("&emsp;" + str(len(wordList_2)))
+            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
+            kpi1_col.write("&emsp;4")
+
+            
 
         # Second column
         kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
