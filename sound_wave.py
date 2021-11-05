@@ -199,14 +199,7 @@ with sound:
 
             #st.image(white_img, width = 25)
             st.write('\n\n\n')
-            
-            freq_1 = spf_1.getframerate()
-            samples_1 = spf_1.getnframes()
-            frames_1 = spf_1.readframes(samples_1)
-
-            # Convert buffer to float32 using NumPy                                                                                 
-            audio_as_np_int16_1 = np.frombuffer(frames_1, dtype=np.int16)            
-            
+                        
             plt.figure(figsize=(35,10))
             plt.title("Spectogram \n", fontsize = 35)
             plt.xlabel('\n Time (s)', fontsize = 30)
@@ -214,6 +207,7 @@ with sound:
             plt.xticks(fontsize = 25)
             plt.yticks(fontsize = 25)
             plt.specgram(audio_as_np_int16_1, Fs=freq_1)
+            plt.show()
             st.pyplot(plt) 
             
             st.write('\n\n\n')
