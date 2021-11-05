@@ -133,13 +133,13 @@ with play:
         #st.image(white_img, width = 25)
         #st.write("« " + text_audio + " »")
         if example == "Q-1703186_VO.mp3":
-            st.write("« " + "Egregio signor Guglielmo Alberto Barletta le ricordo che oggi è il ventidue due duemilaventuno e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A. con sede legale in Genova per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta Iren Più Conveniente Luce Verde sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
+            st.write("« " + "Egregio signor yyyyyy xxxxxx le ricordo che oggi è il ventidue due duemilaventuno e che la sto chiamando da Tunisi per conto di Iren Mercato S.p.A. con sede legale in Genova per proporle una nuova offerta di energia elettrica nel mercato libero chi lei ha accettato la chiamata provvedendo a Tunisi La informo che Lei per la conclusione del contratto di fornitura energia elettrica ha il diritto di scegliere di accettare l'offerta Iren Più Conveniente Luce Verde sul mercato libero dopo aver ricevuto la nostra proposta contrattuale in forma scritta ed averla accettata per iscritto Intende rinunciare al diritto di concludere il contratto in forma scritta mi conferma" + " »")
             st.write("« " + "Sì" + " »")
         elif example == "Q-2807995_VO.mp3":
             st.write("« " + "Mi conferma che oggi è il giorno primo luglio duemilaventi mi conferma" + " »")
             st.write("« " + "Sì" + " »")   
             st.write("« " + "Le chiedo la cortesia di confermarmi il suo nome e cognome signora" + " »")
-            st.write("« " + "Montemurro Anita" + " »")
+            st.write("« " + "xxxxxx yyyyyy" + " »")
             st.write("« " + "La sua data di nascita" + " »")
             st.write("« " + "Uno uno cinquantadue" + " »")
             st.write("« " + "Dove è nata" + " »")
