@@ -144,7 +144,7 @@ with play:
             st.write("« " + "Uno uno cinquantadue" + " »")
             st.write("« " + "Dove è nata" + " »")
             st.write("« " + "Valsinni" + " »")
-            st.write("« " + "Perfetto Mi conferma che l’immobile presso il quale verrà erogata la fornitura di è da lei occupato a titolo di proprietario o inquilino?" + " »")
+            st.write("« " + "Perfetto Mi conferma che l’immobile presso il quale verrà erogata la fornitura di energia elettrica e gas è da lei occupato a titolo di proprietario o inquilino?" + " »")
             st.write("« " + "E proprietaria" + " »")   
             st.write("« " + "Le ricordo che per pagare le bollette attraverso la domiciliazione bancaria è necessario che mi confermi le seguenti informazioni Mi conferma di aver autorizzato Iren Mercato a richiedere in base alla normativa bancaria SEPA l’addebito permanente Core in conto corrente bancario per il pagamento alla data di scadenza dell’obbligazione delle bollette?" + " »")
             st.write("« " + "Sì" + " »")   
