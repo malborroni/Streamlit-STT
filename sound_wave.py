@@ -101,7 +101,7 @@ else:
 
 ######################### INTRO #########################
 with header:
-    st.markdown('<div style="text-align:center"><span class="JTALK_1">J</span><span class="JTALK_2">AKALA // Digitization of Operations</span></div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align:center"><span class="JTALK_1">J</span><span class="JTALK_2">AKALA // Operations Digitization</span></div>', unsafe_allow_html=True)
     st.markdown('<div style="text-align:center"><p class="big-font">Vocal Order Re-Listening</p></div>', unsafe_allow_html=True)  
     st.write('\n\n\n')
     #st.image(white_img, width = 25)
