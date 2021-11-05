@@ -16,6 +16,8 @@ import re
 
 from annotated_text import annotated_text
 
+from scipy.io import wavfile
+
 # import file
 #filename_1 = "audio/TEST.wav"
 filename_1 = "audio/Audio_1.wav"
