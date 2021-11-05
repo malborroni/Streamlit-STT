@@ -69,6 +69,7 @@ if example == "Q-1703186_VO.mp3":
     #signal = signal[:len(time)]
     time_1 = np.linspace(0, fr_1 / fs_1, num = len(signal_1))
     df_1 = pd.DataFrame({'time':time_1, 'signal':signal_1})
+    
     freq_1 = spf_1.getframerate()
     samples_1 = spf_1.getnframes()
     frames_1 = spf_1.readframes(samples_1)
@@ -99,10 +100,10 @@ elif example == "Q-2807995_VO.mp3":
     
     freq_2 = spf_2.getframerate()
     samples_2 = spf_2.getnframes()
-    frames_2 = spf_2.readframes(samples_1)
+    frames_2 = spf_2.readframes(samples_2)
 
     # Convert buffer to float32 using NumPy                                                                                 
-    audio_as_np_int16_1 = np.frombuffer(frames_1, dtype=np.int16)
+    audio_as_np_int16_2 = np.frombuffer(frames_2, dtype=np.int16)
     
 # text from audio
     r = sr.Recognizer()
