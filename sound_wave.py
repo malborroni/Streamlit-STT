@@ -32,6 +32,8 @@ CRM_match_1 = Image.open('images/CRM_table_1.png')
 CRM_match_2 = Image.open('images/CRM_table_2.png')
 result_1 = Image.open('images/result_VO_1.png')
 result_2 = Image.open('images/result_VO_2.png')
+specto_1 = Image.open('images/spectogram_1.png')
+specto_2 = Image.open('images/spectogram_2.png')
 
 ######################### STREAMLIT #########################
 header = st.beta_container()
@@ -70,12 +72,12 @@ if example == "Q-1703186_VO.mp3":
     time_1 = np.linspace(0, fr_1 / fs_1, num = len(signal_1))
     df_1 = pd.DataFrame({'time':time_1, 'signal':signal_1})
     
-    freq_1 = spf_1.getframerate()
-    samples_1 = spf_1.getnframes()
-    frames_1 = spf_1.readframes(samples_1)
+#    freq_1 = spf_1.getframerate()
+#    samples_1 = spf_1.getnframes()
+#    frames_1 = spf_1.readframes(samples_1)
 
     # Convert buffer to float32 using NumPy                                                                                 
-    audio_as_np_int16_1 = np.frombuffer(frames_1, dtype=np.int16)
+#    audio_as_np_int16_1 = np.frombuffer(frames_1, dtype=np.int16)
     
 # text from audio
     r = sr.Recognizer()
@@ -98,12 +100,12 @@ elif example == "Q-2807995_VO.mp3":
     time_2 = np.linspace(0, fr_2 / fs_2, num = len(signal_2))
     df_2 = pd.DataFrame({'time':time_2, 'signal':signal_2})
     
-    freq_2 = spf_2.getframerate()
-    samples_2 = spf_2.getnframes()
-    frames_2 = spf_2.readframes(samples_2)
+#    freq_2 = spf_2.getframerate()
+#    samples_2 = spf_2.getnframes()
+#    frames_2 = spf_2.readframes(samples_2)
 
     # Convert buffer to float32 using NumPy                                                                                 
-    audio_as_np_int16_2 = np.frombuffer(frames_2, dtype=np.int16)
+#    audio_as_np_int16_2 = np.frombuffer(frames_2, dtype=np.int16)
     
 # text from audio
     r = sr.Recognizer()
@@ -200,15 +202,21 @@ with sound:
             #st.image(white_img, width = 25)
             st.write('\n\n\n')
                         
+#            plt.figure(figsize=(35,10))
+#            plt.title("Spectogram \n", fontsize = 35)
+#            plt.xlabel('\n Time (s)', fontsize = 30)
+#            plt.ylabel('Frequency \n', fontsize = 30)
+#            plt.xticks(fontsize = 25)
+#            plt.yticks(fontsize = 25)
+#            plt.specgram(audio_as_np_int16_1, Fs=freq_1)
+#            plt.show()
+#            st.pyplot(plt)
+
             plt.figure(figsize=(35,10))
-            plt.title("Spectogram \n", fontsize = 35)
-            plt.xlabel('\n Time (s)', fontsize = 30)
-            plt.ylabel('Frequency \n', fontsize = 30)
-            plt.xticks(fontsize = 25)
-            plt.yticks(fontsize = 25)
-            plt.specgram(audio_as_np_int16_1, Fs=freq_1)
-            plt.show()
-            st.pyplot(plt) 
+            plt.axis('off')
+            plt.imshow(specto_1) 
+            st.pyplot(plt)  # display it
+
             
             st.write('\n\n\n')
             st.write('\n\n\n')
@@ -231,14 +239,20 @@ with sound:
             #st.image(white_img, width = 25)
             st.write('\n\n\n')
             
+ #           plt.figure(figsize=(35,10))
+ #           plt.title("Spectogram \n", fontsize = 35)
+ #           plt.xlabel('\n Time (s)', fontsize = 30)
+ #           plt.ylabel('Frequency \n', fontsize = 30)
+ #           plt.xticks(fontsize = 25)
+ #           plt.yticks(fontsize = 25)
+ #           plt.specgram(audio_as_np_int16_2, Fs=freq_2)
+ #           st.pyplot(plt)             
+    
             plt.figure(figsize=(35,10))
-            plt.title("Spectogram \n", fontsize = 35)
-            plt.xlabel('\n Time (s)', fontsize = 30)
-            plt.ylabel('Frequency \n', fontsize = 30)
-            plt.xticks(fontsize = 25)
-            plt.yticks(fontsize = 25)
-            plt.specgram(audio_as_np_int16_2, Fs=freq_2)
-            st.pyplot(plt)             
+            plt.axis('off')
+            plt.imshow(specto_2) 
+            st.pyplot(plt)  # display it
+
             
             st.write('\n\n\n')
             st.write('\n\n\n')
