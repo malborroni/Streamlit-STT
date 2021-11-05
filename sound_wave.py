@@ -278,60 +278,60 @@ with sound:
             pass
             
             
-        st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True) 
+ #       st.markdown('<div style="text-align:center"><p class="medium-font">Registered KPIs</p></div>', unsafe_allow_html=True) 
 
-        kpi1_col, kpi2_col = st.beta_columns(2)
+#        kpi1_col, kpi2_col = st.beta_columns(2)
         
         # First column
-        if example == "Q-1703186_VO.mp3":
-            kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
-            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;" + str(round(time_1[-1],1)) + ' sec.')
-            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;" + str(len(wordList_1)))
-            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;4")
-        elif example == "Q-2807995_VO.mp3":
-            kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
-            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;" + str(round(time_2[-1],1)) + ' sec.')
-            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;" + str(len(wordList_2)))
-            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
-            kpi1_col.write("&emsp;13")
+#        if example == "Q-1703186_VO.mp3":
+#            kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
+#            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
+#            kpi1_col.write("&emsp;" + str(round(time_1[-1],1)) + ' sec.')
+#            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
+#            kpi1_col.write("&emsp;" + str(len(wordList_1)))
+#            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
+#            kpi1_col.write("&emsp;4")
+#        elif example == "Q-2807995_VO.mp3":
+#            kpi1_col.markdown('<div style="text-align:left"><p class="medium-font">General Overview:</p></div>', unsafe_allow_html=True)
+#            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Total length: </b></p></div>', unsafe_allow_html=True)
+#            kpi1_col.write("&emsp;" + str(round(time_2[-1],1)) + ' sec.')
+#            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of words: </b></p></div>', unsafe_allow_html=True)
+#            kpi1_col.write("&emsp;" + str(len(wordList_2)))
+#            kpi1_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Number of sentences: </b></p></div>', unsafe_allow_html=True)
+#            kpi1_col.write("&emsp;13")
 
-        else:
-            pass
+#        else:
+#            pass
 
             
 
         # Second column
-        if example == "Q-1703186_VO.mp3":
-            kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Opening: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;35 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Vocal Order: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;5 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;1 sec.')
+#        if example == "Q-1703186_VO.mp3":
+#            kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Opening: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;35 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Vocal Order: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;5 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;1 sec.')
  
-        elif example == "Q-2807995_VO.mp3":
-            kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Date confirmation: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;3 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Generalità: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;7 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Conferma titolo: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;7/8 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Header Domiciliazione: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;7 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Conferma Autorizzazione SEPA: </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;10 sec.')
-            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
-            kpi2_col.write('&emsp;8 sec.')
+#        elif example == "Q-2807995_VO.mp3":
+#            kpi2_col.markdown('<div style="text-align:left"><p class="medium-font">Conversation details:</p></div>', unsafe_allow_html=True)
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Date confirmation: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;3 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Generalità: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;7 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Conferma titolo: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;7/8 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Header Domiciliazione: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;7 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Conferma Autorizzazione SEPA: </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;10 sec.')
+#            kpi2_col.markdown('<div style="text-align:left"><p class="small-font">&#8226; <b> Customer answer(s): </b></p></div>', unsafe_allow_html=True)
+#            kpi2_col.write('&emsp;8 sec.')
             
-        else:
-            pass
+#        else:
+#            pass
 
     st.write('\n\n\n')
     but1, but2, but3, but4, but5 = st.beta_columns(5)
