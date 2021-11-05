@@ -69,6 +69,12 @@ if example == "Q-1703186_VO.mp3":
     #signal = signal[:len(time)]
     time_1 = np.linspace(0, fr_1 / fs_1, num = len(signal_1))
     df_1 = pd.DataFrame({'time':time_1, 'signal':signal_1})
+    freq_1 = spf_1.getframerate()
+    samples_1 = spf_1.getnframes()
+    frames_1 = spf_1.readframes(samples_1)
+
+    # Convert buffer to float32 using NumPy                                                                                 
+    audio_as_np_int16_1 = np.frombuffer(frames_1, dtype=np.int16)
     
 # text from audio
     r = sr.Recognizer()
@@ -90,6 +96,13 @@ elif example == "Q-2807995_VO.mp3":
     #signal = signal[:len(time)]
     time_2 = np.linspace(0, fr_2 / fs_2, num = len(signal_2))
     df_2 = pd.DataFrame({'time':time_2, 'signal':signal_2})
+    
+    freq_2 = spf_2.getframerate()
+    samples_2 = spf_2.getnframes()
+    frames_2 = spf_2.readframes(samples_1)
+
+    # Convert buffer to float32 using NumPy                                                                                 
+    audio_as_np_int16_1 = np.frombuffer(frames_1, dtype=np.int16)
     
 # text from audio
     r = sr.Recognizer()
@@ -185,6 +198,17 @@ with sound:
 
             #st.image(white_img, width = 25)
             st.write('\n\n\n')
+            
+            plt.figure(figsize=(35,10))
+            plt.title("Spectogram \n", fontsize = 35)
+            plt.xlabel('\n Time (s)', fontsize = 30)
+            plt.ylabel('Frequency \n', fontsize = 30)
+            plt.xticks(fontsize = 25)
+            plt.yticks(fontsize = 25)
+            plt.specgram(audio_as_np_int16_1, Fs=freq_1)
+            st.pyplot(plt) 
+            
+            st.write('\n\n\n')
             st.write('\n\n\n')
             
         elif example == "Q-2807995_VO.mp3":
@@ -203,6 +227,17 @@ with sound:
             st.pyplot(plt)
 
             #st.image(white_img, width = 25)
+            st.write('\n\n\n')
+            
+            plt.figure(figsize=(35,10))
+            plt.title("Spectogram \n", fontsize = 35)
+            plt.xlabel('\n Time (s)', fontsize = 30)
+            plt.ylabel('Frequency \n', fontsize = 30)
+            plt.xticks(fontsize = 25)
+            plt.yticks(fontsize = 25)
+            plt.specgram(audio_as_np_int16_2, Fs=freq_2)
+            st.pyplot(plt)             
+            
             st.write('\n\n\n')
             st.write('\n\n\n')
             
